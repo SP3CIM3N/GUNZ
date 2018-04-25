@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace guns
 {
+    /// <summary>
+    /// Главный класс проекта
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

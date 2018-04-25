@@ -6,20 +6,38 @@ using System.Threading.Tasks;
 
 namespace guns
 {
+    /// <summary>
+    /// Класс "Стрелковое оружие" где описаны наши переменные
+    /// </summary>
     class gun
     {
-        //свойства класса
-        public string name { get; set; }   
+        public string name { get; set; }
         public double caliber { get; set; }
         public double range { get; set; }
-        //конструктор по
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
         public gun()
         {
             name = null;
             caliber = 0;
             range = 0;
         }
-
+        /// <summary>
+        /// Конструктор с параметрами
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="z"></param>
+        public gun(string x, double y, double z)
+        {
+            name = x;
+            caliber = y;
+            range = z;
+        }
+        /// <summary>
+        /// Метод ввода параметров с клавиатуры
+        /// </summary>
         public virtual void input()
         {
             Console.Write("Название: ");
@@ -29,7 +47,9 @@ namespace guns
             Console.Write("Дальность: ");
             range = Convert.ToDouble(Console.ReadLine());
         }
-
+        /// <summary>
+        /// Метод вывода значения в консоль
+        /// </summary>
         public virtual void output()
         {
             Console.WriteLine("Название: " + name);
